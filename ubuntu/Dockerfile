@@ -25,7 +25,7 @@ RUN         apt install -y gcc g++ libgcc1 libc++-dev gdb libc6 git wget curl ta
 RUN         update-locale lang=en_US.UTF-8 \
             && dpkg-reconfigure --frontend noninteractive locales
 
-RUN         export DEBIAN_FRONTEND=noninteractive && apt update && apt install software-properties-common -y && add-apt-repository -y universe && add-apt-repository -y multiverse && apt-get install -y curl tar wget libgnustep-base1.28 libdispatch0 patchelf 
+RUN         export DEBIAN_FRONTEND=noninteractive && apt install software-properties-common -y && add-apt-repository -y universe && add-apt-repository -y multiverse && apt update && apt install -y curl tar wget libgnustep-base1.28 libdispatch0 patchelf 
 
 WORKDIR     /home/container
 
